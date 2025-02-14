@@ -26,11 +26,17 @@ const startApolloServer = async () => {
   }));
 
   if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../client/dist')));
+    // Serve static files from the React app
+    const clientBuildPath = path.join(__dirname, '../client/dist');
 
+    app.use(express.static(clientBuildPath));
+
+    // Handles any requests that don't match the ones above
     app.get('*', (req, res) => {
-      res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+      res.sendFile(path.join(clientBuildPath, 'index.html'));
     });
+
+    console.log('Production mode: Serving static files from ' + clientBuildPath);
   }
 
   db.once('open', () => {
@@ -42,4 +48,4 @@ const startApolloServer = async () => {
 };
 
 // Call the async function to start the server
-  startApolloServer();
+startApolloServer();
