@@ -56,6 +56,17 @@ A full-stack MERN application that allows users to search for books using the Go
 
 ## Screenshots
 
+![Login/Signup Page](./screenshots/chal21SS1.png)
+*Login/Signup page*
+
+![Search Page](./screenshots/chal21SS2.png)
+*Search for books and view their details*
+
+![Search for Books](./screenshots/chal21SS3.png)
+*Search for books and view their details*
+
+![Saved Books](./screenshots/chal21SS4.png)
+*View your saved books collection*
 
 ## Repository
 
