@@ -28,7 +28,7 @@ const AppNavbar = () => {
                 <>
                   <a className='nav-link' href='/saved'>
                     See Your Books
-                  </a>
+                  </a >
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>
               ) : (
